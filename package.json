@@ -1,0 +1,19 @@
+{
+  "name": "biz-decorator",
+  "version": "1.0.0",
+  "description": "personal code tools",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wethk/decorator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wethk/decorator/issues"
+  },
+  "homepage": "https://github.com/wethk/decorator#readme"
+}
