@@ -1,6 +1,6 @@
 {
   "name": "biz-decorator",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Blibee code tools",
   "main": "lib/index.js",
   "scripts": {
@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/wethk/decorator/issues"
   },
-  "homepage": "https://github.com/wethk/decorator#readme"
+  "homepage": "https://github.com/wethk/decorator#readme",
+  "dependencies": {
+    "immutable": "^3.8.2",
+    "lodash._baseisequal": "^4.1.1"
+  }
 }
