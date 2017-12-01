@@ -1,2 +1,122 @@
-# decorator
-personal code tools
+## decorator
+RN定制化装饰器，同时兼容其他平台
+
+使用要求：1.babel
+        2.transform-decorators-legacy(或其他decorators的babel插件，目前正在适合我们需求的babel decorator，敬请期待)
+
+如果还不知道babel配置的，出门左转，[基友babel](http://babeljs.io/) 向你招手
+
+### autobind
+
+装饰于类方法上
+
+```js
+// 形如
+Class A{
+    constructor(props){
+        super(props)
+        this.init = this.init.bind(this)
+    }
+
+    init(){
+        ...
+    }
+
+}
+
+// 可以写成
+import { autobind } from 'biz-decorator'
+
+Class A{
+    constructor(props){
+        super(props)
+    }
+
+    @autobind
+    init(){
+        ...
+    }
+
+}
+
+```
+
+### debounce/throttle
+
+装饰于类方法上
+
+参数： number 非必传 默认 300
+
+```js
+// 形如
+import { autobind } from 'biz-decorator'
+
+Class A{
+    constructor(props){
+        super(props)
+    }
+
+    @autobind
+    debounce(){
+        clearTimeout(this.timerRecorder)
+        this.timerRecorder = setTimeout(()=>{
+            ....
+        },3000)
+
+        ...
+    }
+
+    @autobind
+    throttle(){
+        if(this.timeRecorder - Date.now() > 3000){
+            ....
+            this.timeRecorder = Date.now()
+        }
+    }
+
+
+}
+
+// 可以写成
+import { autobind, debounce, throttle } from 'biz-decorator'
+
+Class A{
+    constructor(props){
+        super(props)
+    }
+
+    @autobind
+    @debounce(3000)
+    debounce(){
+        ...
+    }
+
+    @autobind
+    @throttle(3000)
+    throttle(){
+        ....
+    }
+
+}
+
+```
+
+### pureRender
+
+集成immutable的PureRender，如果你还不知道pureRender是什么....please Baidu
+
+装饰于类上
+
+参数 ：bool  非必传 true/false 深比较/浅比较 默认false 
+
+```js
+import { pureRender } from 'biz-decorator'
+
+@pureRender(true)
+Class A{
+    ...
+}
+
+
+```
+
