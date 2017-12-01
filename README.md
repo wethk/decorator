@@ -2,7 +2,7 @@
 RN定制化装饰器，同时兼容其他平台
 
 使用要求：1.babel
-        2.transform-decorators-legacy(或其他decorators的babel插件，目前正在适合我们需求的babel decorator，敬请期待)
+        2.transform-decorators-legacy(或其他decorators的babel插件，目前正在着手打造适合我们需求的babel decorator，敬请期待)
 
 如果还不知道babel配置的，出门左转，[基友babel](http://babeljs.io/) 向你招手
 
