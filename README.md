@@ -8,6 +8,10 @@ RN定制化装饰器，同时兼容其他平台
 
 ### autobind
 
+为解决执行上下文变动的装饰器
+
+注：请与babel-transfrom-decorator-autobind配套使用，autobind装饰器在rn项目中使用存在this丢失问题（偶发），目前使用箭头函数绑定在实例上，但也会出现this指向错误的情况（偶发），建议搭配babel-transfrom-decorator-autobind使用，babel阶段移除@autobind，自动在constructor中添加bind.this
+
 装饰于类方法上
 
 ```js
