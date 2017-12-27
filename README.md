@@ -6,11 +6,11 @@ RN定制化装饰器，同时兼容其他平台
 
 如果还不知道babel配置的，出门左转，[基友babel](http://babeljs.io/) 向你招手
 
-### autobind
+### autobind(RN端不建议使用)
 
 为解决执行上下文变动的装饰器
 
-注：请与babel-transfrom-decorator-autobind配套使用，autobind装饰器在rn项目中使用存在this丢失问题（偶发），目前使用箭头函数绑定在实例上，但也会出现this指向错误的情况（偶发），建议搭配babel-transfrom-decorator-autobind使用，babel阶段移除@autobind，自动在constructor中添加bind.this
+注：请转babel-transfrom-decorator-autobind，autobind装饰器在rn项目中使用存在this丢失问题（偶发），目前使用箭头函数绑定在实例上，但也会出现this指向错误的情况（偶发），建议切换babel-transfrom-decorator-autobind使用，babel阶段移除@autobind，自动在constructor中添加bind.this。只需在babelrc中配置上babel插件可无痛解决autobind this丢失问题
 
 装饰于类方法上
 
