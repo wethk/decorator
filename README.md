@@ -6,7 +6,7 @@ RN定制化装饰器，同时兼容其他平台
 
 如果还不知道babel配置的，出门左转，[基友babel](http://babeljs.io/) 向你招手
 
-### autobind(RN端不建议使用)
+### autobind(RN端不建议使用，JSC执行时存在异常)
 
 为解决执行上下文变动的装饰器
 
